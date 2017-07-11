@@ -15,3 +15,7 @@ ansible-playbook -i "localhost," -c local initial.yml --ask-sudo-pass
 ansible-playbook -i "localhost," -c local common.yml --ask-sudo-pass 
 
 
+#### common stuff
+ansible-playbook -i "localhost," -c local mosquitto.yml --ask-sudo-pass 
+
+

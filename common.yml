@@ -1,0 +1,10 @@
+- hosts: all
+  gather_facts: yes
+
+- hosts: all
+  become: yes
+  roles:
+    - common
+    - desktop_tools	
+    - build_cpp
+    - java8

@@ -1,0 +1,10 @@
+---
+- name: install mosquitto
+  sudo: yes
+  apt: pkg={{ item }}
+  
+  with_items:
+    - mosquitto
+    - mosquitto-clients
+    - python-mosquitto
+

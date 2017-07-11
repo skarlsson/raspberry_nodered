@@ -1,0 +1,25 @@
+---
+- name: Common | Updates packages
+  sudo: yes
+  apt: update_cache=yes upgrade=dist
+
+- name: Common | Make sure essential tools are installed/up-to-date
+  sudo: yes
+  apt: pkg={{ item }}
+  
+  with_items:
+    - python-yaml 
+    - python-jinja2 
+    - python-pycurl
+    - python-apt
+    - ntp
+    - ack-grep
+    - htop   
+    - git
+    - wget     
+    - unzip     
+    - curl
+    - openssl
+    - sysstat
+
+

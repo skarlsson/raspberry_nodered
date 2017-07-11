@@ -2,9 +2,6 @@
   gather_facts: yes
 
 - hosts: all
-  become: yes
+  sudo: yes
   roles:
     - common
-    - desktop_tools	
-    - build_cpp
-    - java8

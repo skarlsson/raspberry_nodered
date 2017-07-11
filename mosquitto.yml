@@ -2,7 +2,7 @@
   gather_facts: yes
 
 - hosts: all
-  become: yes
+  sudo: yes
   roles:
     - mosquitto
 

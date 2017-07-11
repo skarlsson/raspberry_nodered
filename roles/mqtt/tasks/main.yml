@@ -8,3 +8,7 @@
     - mosquitto-clients
     - python-mosquitto
 
+- name: "mosquitto.conf"
+  template: src=mosquitto.conf dest="/etc/mosquitto/conf.d/mosquitto.conf" mode=0774
+  notify:
+    - restart mosquitto

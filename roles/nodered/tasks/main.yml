@@ -4,8 +4,18 @@
     - curl
     - build-essential
 
-- name: install ARMHF-compatible nodejs
-  apt: deb=http://node-arm.herokuapp.com/node_latest_armhf.deb
+
+#sudo apt-get update
+#$ curl -sL https://deb.nodesource.com/setup_7.x | sudo bash -
+#$ apt-get install nodejs
+
+#- name: install ARMHF-compatible nodejs
+#  apt: deb=http://node-arm.herokuapp.com/node_latest_armhf.deb
+
+- name: install node-RED
+  npm: name="{{ item }}" global=yes state=present
+  with_items:
+    - nodejs
 
 - name: install node-RED
   npm: name="{{ item }}" global=yes state=present

@@ -1,4 +1,4 @@
- name: install apt packages
+- name: install apt packages
   apt: name="{{ item }}" state=present update_cache=yes
   with_items:
     - curl

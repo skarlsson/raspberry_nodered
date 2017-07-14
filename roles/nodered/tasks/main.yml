@@ -1,5 +1,5 @@
  name: install apt packages
-  apt: name={{ item }} state=present update_cache=yes
+  apt: name="{{ item }}" state=present update_cache=yes
   with_items:
     - curl
     - build-essential
@@ -8,7 +8,7 @@
   apt: deb=http://node-arm.herokuapp.com/node_latest_armhf.deb
 
 - name: install node-RED
-  npm: name={{ item }} global=yes state=present
+  npm: name="{{ item }}" global=yes state=present
   with_items:
     - node-red-contrib-cron
     - node-red
